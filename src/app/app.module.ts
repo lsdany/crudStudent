@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AddStudentComponent } from './components/add-student/add-student.component';
 import { ShowStudentComponent } from './components/show-student/show-student.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

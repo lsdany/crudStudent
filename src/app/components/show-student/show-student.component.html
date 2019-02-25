@@ -1,7 +1,7 @@
 
 <div class="col-md-6 user-container">
   <h2 style="margin: auto"> Students Information</h2>
-  <button class="btn btn-danger" style="width:100px" (click)="addStudent()"> Add Student</button>
+  <button class="btn btn-danger" style="width:150px" (click)="addStudent()"> Add Student</button>
   <table class="table table-striped">
     <thead>
     <tr>
@@ -13,12 +13,10 @@
     </thead>
     <tbody>
     <tr *ngFor="let student of students">
-      <td class="hidden"></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="hidden">{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.email}}</td>
       <td><button class="btn btn-success" (click)="deleteStudent(student)"> Delete</button>
         <button class="btn btn-success" (click)="editStudent(student)" style="margin-left: 20px;"> Edit</button></td>
     </tr>
