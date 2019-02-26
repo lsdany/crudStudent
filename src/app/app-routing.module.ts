@@ -7,9 +7,9 @@ import {AddStudentComponent} from "./components/add-student/add-student.componen
 
 const routes: Routes = [
   //{ path: 'login', component: LoginComponent },
-  { path: 'add-user', component: AddStudentComponent },
-  { path: 'list-user', component: ShowStudentComponent },
-  { path: 'edit-user', component: EditStudentComponent },
+  { path: 'add-student', component: AddStudentComponent },
+  { path: 'show-student', component: ShowStudentComponent },
+  { path: 'edit-student', component: EditStudentComponent },
   //{path : '', component : LoginComponent}
   {path : '', component : ShowStudentComponent}
 ];

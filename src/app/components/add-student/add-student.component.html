@@ -1,3 +1,25 @@
-<p>
-  add-student works!
-</p>
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Add Student</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="id">Id:</label>
+      <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name">
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input type="number" formControlName="age" placeholder="Age" name="age" class="form-control" id="age">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input formControlName="email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+    <button class="btn btn-success">Add</button>
+  </form>
+</div>

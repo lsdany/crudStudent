@@ -8,6 +8,7 @@ import { AddStudentComponent } from './components/add-student/add-student.compon
 import { ShowStudentComponent } from './components/show-student/show-student.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
 import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {HttpClientModule} from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

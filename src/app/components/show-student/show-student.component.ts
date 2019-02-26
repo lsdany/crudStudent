@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-//import { Router } from "@angular/router";
 import { Student } from "../../model/student.model";
 import { ApiService } from "../../services/api.service";
 import {HttpClient} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-show-student',
@@ -13,7 +13,7 @@ export class ShowStudentComponent implements OnInit {
 
   students: Student[];
 
-  constructor(private apiService: ApiService) {
+  constructor(private apiService: ApiService, private router: Router) {
   }
 
   ngOnInit() {
@@ -26,15 +26,21 @@ export class ShowStudentComponent implements OnInit {
   }
 
   deleteStudent(student: Student): void {
-
+    this.apiService.deleteStudent(student.id)
+      .subscribe( data => {
+        this.students = this.students.filter(u => u !== student);
+      })
   };
 
   editStudent(student: Student): void {
 
+    window.localStorage.removeItem("editStudentId");
+    window.localStorage.setItem("editStudentId", student.id.toString());
+    this.router.navigate(['edit-student']);
   };
 
   addStudent(): void {
-
+      this.router.navigate(['add-student']);
   };
 
 }
